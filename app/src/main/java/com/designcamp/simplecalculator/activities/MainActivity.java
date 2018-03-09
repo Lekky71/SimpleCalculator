@@ -1,5 +1,6 @@
-package com.designcamp.simplecalculator;
+package com.designcamp.simplecalculator.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.designcamp.simplecalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,6 +64,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onLongClick(View v) {
                 resultTextView.setText("");
                 return true;
+            }
+        });
+
+        equalToButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent nextIntent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(nextIntent);
+                finish();
             }
         });
     }
@@ -143,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     resultTextView.setText(result.substring(0, result.length() - 1));
                 }
             }
+
 
         }
     };

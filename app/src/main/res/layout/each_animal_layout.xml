@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:layout_height="100dp"
+    android:orientation="horizontal">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/animal_image_view"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        tools:src="@mipmap/ic_launcher"
+        android:layout_height="100dp" />
+
+    <TextView
+        android:id="@+id/animal_name_text_view"
+        android:layout_width="0dp"
+        android:layout_weight="2.5"
+        android:gravity="center_vertical"
+        android:fontFamily="casual"
+        android:textSize="20sp"
+        tools:text="Dog"
+        android:padding="10dp"
+        android:layout_height="match_parent" />
+</LinearLayout>
